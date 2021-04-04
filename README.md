@@ -1,8 +1,5 @@
 # consumer-producer
-* This is a kafka spring boot application which listen
-
-### Program Arguments
-* -Dspring.application.name=CONSUMER-PRODUCER-SERVICE
+* A spring kafka streams app template
 
 ### Confluent Kafka Commands
 * confluent local services start
@@ -17,10 +14,10 @@
 {"bookId": 1, "bookName": "Kafka", "bookAuthor": "Sameer", "isGood": true}
 
 ### Consumer Commands
-* kafka-topics.sh --create --topic event-output -zookeeper localhost:2181 --replication-factor 1 --partitions 1
-* kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic event-output
+* kafka-topics.sh --create --topic streams-output -zookeeper localhost:2181 --replication-factor 1 --partitions 1
+* kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic streams-output
 
 ### Delete topics
-* kafka-topics.sh --zookeeper localhost:2181 --delete --topic event-input
 * kafka-topics.sh --zookeeper localhost:2181 --delete --topic event-output
+* kafka-topics.sh --zookeeper localhost:2181 --delete --topic streams-output
 
